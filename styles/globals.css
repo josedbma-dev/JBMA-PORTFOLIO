@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Raleway', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#111] text-[#ecf0f3] tracking-wide
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+  
+  li {
+    @apply cursor-pointer
+  }
+
+  button {
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+  }
+
+  /* TIMELINE COMPONENT */
+  .timeline-img {
+    @apply h-24 w-24 object-cover rounded-full shadow-md border-4 border-white xs:absolute md:mx-auto md:left-0 md:right-0;
+}
+.timeline-container {
+    @apply relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-auto md:pl-16;
+}
+.timeline-container-left {
+    @apply md:ml-0 md:mr-auto md:pl-0 md:pr-16;
+}
+.timeline-pointer {
+    @apply absolute inset-0 left-10 h-4 w-4 transform rotate-45 bg-white xs:top-11 xs:left-26 md:left-14;
+}
+.timeline-pointer-left {
+    @apply md:left-auto md:right-14;
+}
+}
+
+.card-css {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  background-color: #333;
+  transition: .5s;
+}
+
+.card-css:hover {
+  height: 450px;
+}
+
+.card-css .lines {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.card-css .lines::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(transparent, rgb(79 70 229),
+  rgb(79 70 229), rgb(79 70 229), transparent);
+  animation: animate 4s linear infinite;
+}
+
+.custom-blue {
+  color: rgb(79, 70, 229);
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card-css .lines::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background-color: rgb(23 23 23);
+}
+
+.card-css .imgBx {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: #000;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card-css:hover .imgBx {
+  width: 250px;
+  height: 250px;
+}
+
+.card-css .imgBx::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(transparent, #ff3c7b,
+  #ff3c7b, #ff3c7b, transparent);
+  animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.card-css .imgBx::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #292929;
+}
+
+.card-css .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.card-css .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(145px);
+}
+
+.card-css:hover .content .details {
+  transform: translateY(0px);
+}
+
+.card-css:hover .content .details h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #45f3ff;
+  line-height: 1.2em;
+}
+
+.card-css:hover .content .details h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.card-css .content .details .data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card-css .content .details .data h3 {
+  font-size: 1em;
+  color: #45f3ff;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.card-css .content .details .data h3 span {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.card-css .content .details .actionBtn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-css .content .details .actionBtn button {
+  padding: 10px 30px;
+}
+
+/* Swiper Mediaqueries */
+
+.swiper-container {
+  width: 480px;
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+}
