@@ -169,7 +169,7 @@ export const Navbar = () => {
               </Link>
               <Link href="/RESUME_JOSE_DAVID_BOLIVAR_MAYORA.pdf"
                  target="_blank"
-                 rel="noopener noreferrer">
+                 rel="noreferrer">
                 <li onClick={() => setNav(false)} className='py-4 text-sm'>
                   Resume
                 </li>

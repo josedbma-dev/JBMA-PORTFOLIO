@@ -23,7 +23,7 @@ export const CardProfile = () => {
               <div className="actionBtn">
                 <a href="/RESUME_JOSE_DAVID_BOLIVAR_MAYORA.pdf"
                  target="_blank"
-                 rel="noopener noreferrer"
+                 rel="noreferrer"
                 >
                   <button>Resume</button>
                 </a>

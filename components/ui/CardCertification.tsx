@@ -13,7 +13,7 @@ export const CardCertification: FC<Props> = ({ img, title, link }) => {
     <div className="w-full h-[300px] relative">
         <a href={ link }
            target="_blank"
-           rel="noopener noreferrer">
+           rel="noreferrer">
         <Image
         src={ img }
         alt={ title }
