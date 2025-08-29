@@ -1,6 +1,6 @@
 import { Layout } from '../components/layouts';
 import { Banner, About, Projects, ContactBanner } from '../components/ui';
-import { TimelineContainer, Certifications, Skills, DataAnalytics } from '../components/containers';
+import { TimelineContainer, Certifications, Skills, DataAnalytics, SupportSpecialist } from '../components/containers';
 
 export default function Home() {
   return (
@@ -25,6 +25,8 @@ export default function Home() {
       <div className='w-[96%] m-auto'>
         <Certifications />
       </div>
+
+        <SupportSpecialist />
     </Layout>
   )
 }

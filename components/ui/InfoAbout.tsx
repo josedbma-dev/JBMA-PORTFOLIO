@@ -9,7 +9,7 @@ export const InfoAbout = () => {
         <div className="flex flex-col gap-2">
         <h2>ABOUT ME</h2>
         <p>
-        👋🏽Welcome to my website, my name is José David Bolívar Mayora I am 20 years old and saw in the city of Bogota, ✌ I’m working on my english language skills and my knowledge in software architecture and IT project leader ♛.
+        👋🏽Welcome to my website, my name is José David Bolívar Mayora I am 22 years old and saw in the city of Bogota, ✌ I’m working on my english language skills and my knowledge in software architecture and IT project leader ♛.
         <br /><br />
             In my personal hobbies, I really enjoy working out at the gym and running. 💬 Ask me about anything, I am happy to help.
 

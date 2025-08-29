@@ -221,6 +221,13 @@ html {
   width: 480px;
 }
 
+.bg-image {
+  background-image: url("../public/oficina1.jpg");
+  background-position: 0 100%;
+  background-size: cover;
+  
+}
+
 @media screen and (min-width: 640px) {
   .swiper-container {
     width: 640px;
